@@ -1,0 +1,9 @@
+import re
+
+headers ='''
+
+'''
+
+pattern = '^(.*?):[\s]*(.*?)$'
+for line in headers.splitlines():
+    print(re.sub(pattern,'\'\\1\':\'\\2\',',line))
